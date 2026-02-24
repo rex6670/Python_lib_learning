@@ -9,16 +9,16 @@
 
 ## 每日學習說明檔（快速入口）
 
-- [Day01 學習說明](Day01/day01_learning.md)
-- [Day02 學習說明](Day02/day02_learning.md)
-- [Day03 學習說明](Day03/day03_learning.md)
-- [Day04 學習說明](Day04/day04_learning.md)
-- [Day05 學習說明](Day05/day05_learning.md)
-- [Day06 學習說明](Day06/day06_learning.md)
-- [Day07 學習說明](Day07/day07_learning.md)
-- [Day08 學習說明](Day08/day08_learning.md)
-- [Day09 學習說明](Day09/day09_learning.md)
-- [Day10 學習說明](Day10/day10_learning.md)
+- Day01： [中文](Day01/day01_learning_zh.md) | [English](Day01/day01_learning_en.md)
+- Day02： [中文](Day02/day02_learning_zh.md) | [English](Day02/day02_learning_en.md)
+- Day03： [中文](Day03/day03_learning_zh.md) | [English](Day03/day03_learning_en.md)
+- Day04： [中文](Day04/day04_learning_zh.md) | [English](Day04/day04_learning_en.md)
+- Day05： [中文](Day05/day05_learning_zh.md) | [English](Day05/day05_learning_en.md)
+- Day06： [中文](Day06/day06_learning_zh.md) | [English](Day06/day06_learning_en.md)
+- Day07： [中文](Day07/day07_learning_zh.md) | [English](Day07/day07_learning_en.md)
+- Day08： [中文](Day08/day08_learning_zh.md) | [English](Day08/day08_learning_en.md)
+- Day09： [中文](Day09/day09_learning_zh.md) | [English](Day09/day09_learning_en.md)
+- Day10： [中文](Day10/day10_learning_zh.md) | [English](Day10/day10_learning_en.md)
 
 ---
 

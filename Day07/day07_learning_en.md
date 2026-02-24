@@ -5,6 +5,16 @@
 - `numpy`: contiguous arrays improve Numba performance.
 - `time`: separate first-run compile cost from steady-state runtime.
 
+## Common Basics
+- `@numba.njit`: accelerate numeric loops.
+- `time.perf_counter()`: accurate timing.
+- warm-up first, then benchmark.
+
+```python
+import time
+s = time.perf_counter(); _ = sum(range(1000)); print(time.perf_counter()-s)
+```
+
 ## Example
 ```python
 import numba as nb, numpy as np, time

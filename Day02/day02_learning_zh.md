@@ -5,6 +5,17 @@
 - `datetime` / `time`：記錄解析時間與吞吐量（檔案/秒）。
 - `hashlib`：SHA-256 指紋用於增量流程與重複檢查。
 
+## 基礎常用用法
+- `re.match()`：從字串開頭做格式比對。
+- `datetime.now().isoformat()`：標準時間字串。
+- `hashlib.sha256(data).hexdigest()`：快速產生摘要。
+
+```python
+import re, hashlib
+print(bool(re.match(r"^top_", "top_cpu")))
+print(hashlib.sha256(b"abc").hexdigest()[:8])
+```
+
 ## 範例
 ```python
 import re, time, hashlib

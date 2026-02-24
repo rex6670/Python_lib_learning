@@ -6,6 +6,17 @@
 - `logging`: write structured logs (job_id/corner/status).
 - `traceback`: preserve full stack traces for debugging.
 
+## Common Basics
+- `subprocess.run(..., capture_output=True, text=True)`: capture command output.
+- `timeout=`: avoid hanging tool runs.
+- `logging.info()/error()`: baseline runtime logs.
+
+```python
+import subprocess
+r = subprocess.run(["python", "-c", "print('ok')"], capture_output=True, text=True, timeout=3)
+print(r.stdout.strip())
+```
+
 ## Example
 ```python
 import subprocess, signal, logging, traceback

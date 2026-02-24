@@ -6,6 +6,17 @@
 - `logging`：輸出標準化 job log（job_id/corner/status）。
 - `traceback`：保存完整錯誤堆疊供 debug。
 
+## 基礎常用用法
+- `subprocess.run(..., capture_output=True, text=True)`：拿到輸出字串。
+- `timeout=`：避免工具卡住。
+- `logging.info()/error()`：基本運行紀錄。
+
+```python
+import subprocess
+r = subprocess.run(["python", "-c", "print('ok')"], capture_output=True, text=True, timeout=3)
+print(r.stdout.strip())
+```
+
 ## 範例
 ```python
 import subprocess, signal, logging, traceback

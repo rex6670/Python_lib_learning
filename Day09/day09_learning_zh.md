@@ -6,6 +6,17 @@
 - `configparser`：用設定檔控制 log level、備份策略。
 - `shutil`：失敗工件封存。
 
+## 基礎常用用法
+- `logging.basicConfig(...)`：設定 log 檔與等級。
+- `traceback.format_exc()`：取得例外堆疊。
+- `shutil.copy2()`：保留 metadata 複製。
+
+```python
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("hello")
+```
+
 ## 範例
 ```python
 import logging, traceback, configparser, shutil

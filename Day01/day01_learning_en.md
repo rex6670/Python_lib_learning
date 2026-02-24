@@ -7,6 +7,18 @@
 - `collections` / `itertools` / `functools`: aggregation, grouping, reduction.
 - `shutil` / `tempfile`: safe backup and staging.
 
+## Common Basics
+- `Path.exists()`: check path existence.
+- `Path.mkdir(parents=True, exist_ok=True)`: create output folders.
+- `Path.rglob("*.def")`: recursively find files.
+
+```python
+from pathlib import Path
+out = Path("Day01/output")
+out.mkdir(parents=True, exist_ok=True)
+print(out.exists())
+```
+
 ## Examples
 ### 1) Scan and filter files (`os`, `pathlib`, `glob`)
 ```python

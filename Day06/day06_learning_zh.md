@@ -6,6 +6,17 @@
 - `scipy.spatial.cKDTree`：最近鄰查詢。
 - 比較 `list[dict]` / `structured array` / `DataFrame` 的速度與記憶體。
 
+## 基礎常用用法
+- `np.array`、布林 mask：向量化篩選。
+- `df.memory_usage(deep=True)`：估算 DataFrame 記憶體。
+- `cKDTree.query()`：最近鄰查詢。
+
+```python
+import numpy as np
+x = np.array([1,2,3,4])
+print(x[x>=3])
+```
+
 ## 範例
 ```python
 import numpy as np, pandas as pd

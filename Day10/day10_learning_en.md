@@ -7,6 +7,16 @@
 - `logging`: end-to-end observability.
 - Integrate Day01~Day09: inventory → parse/hash → runner → QoR → spatial → report.
 
+## Common Basics
+- `argparse`: read runtime parameters.
+- `ThreadPoolExecutor.map()`: run jobs in parallel.
+- `json.dump` / `csv.DictWriter`: write structured outputs.
+
+```python
+import json
+print(json.dumps({"ok": True}))
+```
+
 ## Example
 ```python
 import argparse, csv, json, logging

@@ -6,6 +6,17 @@
 - `configparser`: configure log level and backup policy.
 - `shutil`: archive failed artifacts.
 
+## Common Basics
+- `logging.basicConfig(...)`: configure log level/output.
+- `traceback.format_exc()`: capture stack trace.
+- `shutil.copy2()`: copy with metadata.
+
+```python
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("hello")
+```
+
 ## Example
 ```python
 import logging, traceback, configparser, shutil

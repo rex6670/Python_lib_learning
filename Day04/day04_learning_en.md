@@ -6,6 +6,17 @@
 - `pickle`: cache intermediate payloads to reduce rerun time.
 - `sys`: inspect Python/runtime environment.
 
+## Common Basics
+- `argparse.ArgumentParser()`: define CLI arguments.
+- `configparser.ConfigParser().read(...)`: load ini configs.
+- `pickle.dump/load`: write/read cache payloads.
+
+```python
+import argparse
+p = argparse.ArgumentParser(); p.add_argument("--design", default="top")
+print(p.parse_args([]).design)
+```
+
 ## Example
 ```python
 import argparse, configparser, pickle, sys

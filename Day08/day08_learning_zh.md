@@ -6,6 +6,17 @@
 - `queue`：失敗任務重試與背壓控制。
 - `concurrent.futures`：統一 thread/process 平行抽象。
 
+## 基礎常用用法
+- `ThreadPoolExecutor`：I/O 任務並行。
+- `ProcessPoolExecutor`：CPU 任務並行。
+- `queue.Queue`：producer/consumer 協調。
+
+```python
+from concurrent.futures import ThreadPoolExecutor
+with ThreadPoolExecutor(max_workers=2) as ex:
+    print(list(ex.map(lambda i: i*i, [1,2,3])))
+```
+
 ## 範例
 ```python
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor

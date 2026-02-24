@@ -6,6 +6,17 @@
 - `scipy.spatial.cKDTree`: nearest-neighbor queries.
 - Compare `list[dict]` / `structured array` / `DataFrame` for speed and memory.
 
+## Common Basics
+- `np.array` + boolean masks: vectorized filtering.
+- `df.memory_usage(deep=True)`: estimate DataFrame memory.
+- `cKDTree.query()`: nearest-neighbor lookup.
+
+```python
+import numpy as np
+x = np.array([1,2,3,4])
+print(x[x>=3])
+```
+
 ## Example
 ```python
 import numpy as np, pandas as pd

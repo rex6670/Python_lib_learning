@@ -7,6 +7,16 @@
 - `logging`：整合流水線可觀測性。
 - 串接 Day01~Day09：inventory → parse/hash → runner → QoR → spatial → report。
 
+## 基礎常用用法
+- `argparse`：接收執行參數。
+- `ThreadPoolExecutor.map()`：平行跑 job。
+- `json.dump` / `csv.DictWriter`：輸出結果。
+
+```python
+import json
+print(json.dumps({"ok": True}))
+```
+
 ## 範例
 ```python
 import argparse, csv, json, logging

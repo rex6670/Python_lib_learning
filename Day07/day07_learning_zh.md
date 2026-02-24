@@ -5,6 +5,16 @@
 - `numpy`：用連續陣列提升 Numba 效果。
 - `time`：分別量測第一次編譯成本與穩定執行時間。
 
+## 基礎常用用法
+- `@numba.njit`：加速純數值迴圈。
+- `time.perf_counter()`：精準量測。
+- 先 warm-up 再 benchmark。
+
+```python
+import time
+s = time.perf_counter(); _ = sum(range(1000)); print(time.perf_counter()-s)
+```
+
 ## 範例
 ```python
 import numba as nb, numpy as np, time

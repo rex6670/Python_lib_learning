@@ -7,6 +7,18 @@
 - `collections` / `itertools` / `functools`：統計彙總、分群、累加。
 - `shutil` / `tempfile`：安全備份與暫存 staging。
 
+## 基礎常用用法
+- `Path.exists()`：檢查路徑存在。
+- `Path.mkdir(parents=True, exist_ok=True)`：建立輸出資料夾。
+- `Path.rglob("*.def")`：遞迴找特定檔案。
+
+```python
+from pathlib import Path
+out = Path("Day01/output")
+out.mkdir(parents=True, exist_ok=True)
+print(out.exists())
+```
+
 ## 範例
 ### 1) 掃描專案與過濾副檔名（`os`, `pathlib`, `glob`）
 ```python

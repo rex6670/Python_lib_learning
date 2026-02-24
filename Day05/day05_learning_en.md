@@ -5,6 +5,17 @@
 - `csv` / `json`: export summary and delta reports.
 - QoR metrics: classify WNS/TNS/violations as improvement or degradation.
 
+## Common Basics
+- `pd.read_csv()` / `to_csv()`: load and export data.
+- `DataFrame.merge()`: combine report tables.
+- `sort_values()`: quickly locate worst cases.
+
+```python
+import pandas as pd
+x = pd.DataFrame({"a":[2,1]})
+print(x.sort_values("a"))
+```
+
 ## Example
 ```python
 import pandas as pd, json

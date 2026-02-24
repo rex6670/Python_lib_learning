@@ -6,6 +6,17 @@
 - `pickle`：快取中間結果減少重跑時間。
 - `sys`：檢查 Python 版本、平台資訊。
 
+## 基礎常用用法
+- `argparse.ArgumentParser()`：建立 CLI。
+- `configparser.ConfigParser().read(...)`：載入設定檔。
+- `pickle.dump/load`：儲存與讀取快取。
+
+```python
+import argparse
+p = argparse.ArgumentParser(); p.add_argument("--design", default="top")
+print(p.parse_args([]).design)
+```
+
 ## 範例
 ```python
 import argparse, configparser, pickle, sys

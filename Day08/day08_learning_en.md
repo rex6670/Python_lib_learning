@@ -6,6 +6,17 @@
 - `queue`: retry control and back-pressure handling.
 - `concurrent.futures`: unified API for thread/process parallelism.
 
+## Common Basics
+- `ThreadPoolExecutor`: parallel I/O tasks.
+- `ProcessPoolExecutor`: parallel CPU tasks.
+- `queue.Queue`: producer/consumer coordination.
+
+```python
+from concurrent.futures import ThreadPoolExecutor
+with ThreadPoolExecutor(max_workers=2) as ex:
+    print(list(ex.map(lambda i: i*i, [1,2,3])))
+```
+
 ## Example
 ```python
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor

@@ -5,6 +5,17 @@
 - `csv` / `json`：輸出 summary 與 delta 報告。
 - QoR 指標：WNS/TNS/violations 的改善與退化判斷。
 
+## 基礎常用用法
+- `pd.read_csv()` / `to_csv()`：資料載入與輸出。
+- `DataFrame.merge()`：兩份報表合併。
+- `sort_values()`：快速找 worst case。
+
+```python
+import pandas as pd
+x = pd.DataFrame({"a":[2,1]})
+print(x.sort_values("a"))
+```
+
 ## 範例
 ```python
 import pandas as pd, json

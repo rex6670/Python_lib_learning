@@ -5,6 +5,17 @@
 - `datetime` / `time`: record parse timestamps and throughput.
 - `hashlib`: use SHA-256 for deduplication and incremental flow control.
 
+## Common Basics
+- `re.match()`: validate from string start.
+- `datetime.now().isoformat()`: standard timestamp format.
+- `hashlib.sha256(...).hexdigest()`: stable digest.
+
+```python
+import re, hashlib
+print(bool(re.match(r"^top_", "top_cpu")))
+print(hashlib.sha256(b"abc").hexdigest()[:8])
+```
+
 ## Example
 ```python
 import re, time, hashlib

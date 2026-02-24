@@ -7,6 +7,21 @@
 
 ---
 
+## 每日學習說明檔（快速入口）
+
+- [Day01 學習說明](Day01/day01_learning.md)
+- [Day02 學習說明](Day02/day02_learning.md)
+- [Day03 學習說明](Day03/day03_learning.md)
+- [Day04 學習說明](Day04/day04_learning.md)
+- [Day05 學習說明](Day05/day05_learning.md)
+- [Day06 學習說明](Day06/day06_learning.md)
+- [Day07 學習說明](Day07/day07_learning.md)
+- [Day08 學習說明](Day08/day08_learning.md)
+- [Day09 學習說明](Day09/day09_learning.md)
+- [Day10 學習說明](Day10/day10_learning.md)
+
+---
+
 ## Day 0 — 環境準備
 
 ### 安裝

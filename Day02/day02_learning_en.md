@@ -1,17 +1,28 @@
 # Day 02: Naming Rule Parsing & File Fingerprints
 
-## Key Learning Points
-- Use `re` to parse structured EDA filenames.
-- Use `datetime`/`time` for timestamping and performance measurement.
-- Use `hashlib` SHA-256 fingerprints for deduplication.
+## Key Learning Points (Detailed)
+- `re`: parse and validate filename fields with named groups.
+- `datetime` / `time`: record parse timestamps and throughput.
+- `hashlib`: use SHA-256 for deduplication and incremental flow control.
 
 ## Example
 ```python
-import re
-pat = re.compile(r"(?P<design>[A-Za-z0-9_]+)_v(?P<version>\d+)_(?P<corner>TT|SS|FF)_(?P<volt>\d+p\d+V)_(?P<temp>-?\d+C)\.def$")
-print(pat.match("top_cpu_v12_FF_0p72V_125C.def").groupdict())
+import re, time, hashlib
+from datetime import datetime
+
+pat = re.compile(r"(?P<design>[A-Za-z0-9_]+)_v(?P<ver>\d+)_(?P<corner>TT|SS|FF)_(?P<volt>\d+p\d+V)_(?P<temp>-?\d+C)\.def$")
+name = "top_cpu_v12_FF_0p72V_125C.def"
+
+t0 = time.perf_counter()
+m = pat.match(name)
+print(m.groupdict() if m else "invalid")
+print("parsed_at", datetime.now().isoformat(timespec="seconds"))
+print("elapsed_s", round(time.perf_counter() - t0, 6))
+
+print(hashlib.sha256(name.encode()).hexdigest())
 ```
 
 ## Exercise
-Parse 500 names and report valid/invalid ratio.
-Build a `hash -> [paths]` map.
+1. Parse 500 names and report valid/invalid ratio.
+2. Export `parsed_manifest.json` with parse timestamp.
+3. Build `hash -> [paths]` map and list duplicate files.

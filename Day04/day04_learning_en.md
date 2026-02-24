@@ -1,20 +1,27 @@
 # Day 04: CLI and Flow Configuration
 
-## Key Learning Points
-Define flow parameters with `argparse`.
-Manage node/tool configs using `configparser`.
-Cache intermediate results with `pickle` and inspect runtime with `sys`.
+## Key Learning Points (Detailed)
+- `argparse`: build a reproducible CLI interface (design/corners/threads/node).
+- `configparser`: externalize node/tool parameters.
+- `pickle`: cache intermediate payloads to reduce rerun time.
+- `sys`: inspect Python/runtime environment.
 
 ## Example
 ```python
-import argparse
+import argparse, configparser, pickle, sys
+
 p = argparse.ArgumentParser()
 p.add_argument("--design", required=True)
-p.add_argument("--corners", default="TT,SS")
-args = p.parse_args()
-print(args.design, args.corners.split(","))
+p.add_argument("--corners", default="TT,SS,FF")
+p.add_argument("--threads", type=int, default=8)
+args = p.parse_args([])
+
+cfg = configparser.ConfigParser(); cfg.read("Day04/flow.ini")
+pickle.dump(vars(args), open("Day04/cache.pkl", "wb"))
+print("py", sys.version.split()[0], "sections", cfg.sections())
 ```
 
 ## Exercise
-Support `--design --corners --threads --node`.
-Reuse cache when input hash is unchanged.
+1. Implement `run_flow.py --design top_cpu --corners TT,SS --threads 8 --node N7`.
+2. Reuse `cache.pkl` when input hash is unchanged.
+3. Persist effective runtime options into `run_config.json`.
